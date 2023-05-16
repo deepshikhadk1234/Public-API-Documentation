@@ -1,7 +1,6 @@
 # Create Customer
 
-The following API will create customer for the requesting office.
-
+The following API will create customer for the requesting office. Only registered clients have the access to create customers and demand. 
 ### Important fields:
 To create a customer/client for an existing office the following fields information are important.
 - `office`
