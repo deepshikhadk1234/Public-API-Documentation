@@ -13,18 +13,14 @@ To create a customer/client for an existing office the following fields informat
 
 ----
 ## Header
-```json
-curl --request PUT \
-  --url https://publicapi.pujacapital.com/activities/create \
-  --header 'Authorization: Basic {{token}}' \
-  --header 'Content-Type: application/json' \
+```
+Authorization: Basic {{token}}
+Content-Type: application/json
   ```
 | Key | Value | Data Type | Description |
 | ----------- | ----------- | ------------| ----------- |
 | `Authorization` | Basic {{token}} | String | Token generated from login |
-|`Content-Type `| Application/json | String | application/json
-|
-|
+|`Content-Type `| Application/json | String | application/json |
 
 
 ----
@@ -95,7 +91,7 @@ curl --request PUT \
 | Key | Value | Data Type | Description |
 | ----------- | ----------- | ------------| ----------- |
 |`timestamp` | 1683971721265 | number | time of the creation |
-|
+
 - Venue
 
 | Key | Value (default) | Data Type | Description |
@@ -104,35 +100,35 @@ curl --request PUT \
 | `geopoint` | | | |
 | `location` | | String | Location of the customer office |
 | `address` | | String | Address of the customer office |
-|
+
 
 - Schedule
 
 | Key | Value (default) | Data Type | Description |
 | ----------- | ----------- | ------------| ----------- |
 |`schedule` | can be empty | array | schedule  |
-|
+
 
 - office
 
 | Key | Value (default) | Data Type | Description |
 | ----------- | ----------- | ------------| ----------- |
 |`office` | KAVYA COSMETICS | String | name of the requesting office  |
-|
+
 
 - share
 
 | Key | Value (default) | Data Type | Description |
 | ----------- | ----------- | ------------| ----------- |
 |`share` | can be empty | array |   |
-|
+
 
 - template
 
 | Key | Value (default) | Data Type | Description |
 | ----------- | ----------- | ------------| ----------- |
 |`template` | customer | string |   |
-|
+
 
 - attachements
 
@@ -147,7 +143,7 @@ curl --request PUT \
 | `earlyPaymentRate` | 0 | number/int/float | |
 | `firstContact` | +918753733567 | phone number | phone number of the supplier |
 | `vendorCode` | can be empty | String | vendor code given by the requesting office |
-|
+
 
 
 ### Response
