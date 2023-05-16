@@ -158,7 +158,7 @@ Content-Type: application/json
 
 ----
 
-
+----
 ## Error Response
 - 403 - Forbidden 
 ```json
