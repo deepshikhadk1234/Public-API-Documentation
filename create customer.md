@@ -160,6 +160,32 @@ Content-Type: application/json
 
 ----
 ## Error Response
+
+- 400 - Bad Request
+```json
+{
+    "message": "The 'firstContactEmail' is Invalid.",
+    "success": false,
+    "code": 400
+}
+```
+
+```json
+{
+    "message": "Invalid value for the field 'gstNumber' in attachment object",
+    "success": false,
+    "code": 400
+}
+```
+
+```json
+{
+    "message": "The 'firstContactName' field should be a non-empty string.",
+    "success": false,
+    "code": 400
+}
+```
+------
 - 403 - Forbidden 
 ```json
 {
@@ -168,5 +194,6 @@ Content-Type: application/json
     "code": 403
 }
 ```
+-----
 
-
+### For more detailed errors [click here](./errors.md#createdemand).
