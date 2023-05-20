@@ -122,15 +122,6 @@ Content-Type: application/json
 | ----------- | ----------- | ------------| ----------- |
 |`template` | demand | String |  |
 
-<!-- - Venue
-
-| Key | Value (default) | Data Type | Description |
-| ----------- | ----------- | ------------| ----------- |
-|`venueDescriptor` | Customer Office | String | |
-| `geopoint` | | | |
-| `location` | | String | Location of the customer office |
-| `address` | | String | Address of the customer office | -->
-
 - Activity Id
 
 | Key | Value (default) | Data Type | Description |
@@ -208,6 +199,9 @@ Content-Type: application/json
 
 
 ## Error Response
+
+
+### For more detailed errors [click here](./errors.md#update).
 
 
 
