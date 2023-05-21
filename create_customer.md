@@ -52,7 +52,7 @@ Content-Type: application/json
     "attachment": {
         "firstContactEmail": {
             "type": "string",
-            "value": ""
+            "value": "deepika_rajwar@gmail.com"
         },
         "gstNumber": {
             "type": "gst",
@@ -64,15 +64,15 @@ Content-Type: application/json
         },
         "tds": {
             "type": "number",
-            "value": 10
+            "value": 0
         },
         "moratium": {
             "type": "number",
-            "value": 20
+            "value": 0
         },
         "firstContactName": {
             "type": "string",
-            "value": ""
+            "value": "Deepika Rajwar"
         },
         "earlyPaymentRate": {
             "type": "number",
@@ -80,7 +80,7 @@ Content-Type: application/json
         },
         "firstContact": {
             "type": "phoneNumber",
-            "value": ""
+            "value": "+917668235469"
         },
         "vendorCode": {
             "type": "string",
@@ -100,10 +100,10 @@ Content-Type: application/json
 
 | Key | Value (default) | Data Type | Description |
 | ----------- | ----------- | ------------| ----------- |
-|`venueDescriptor` | Customer Office | String | |
+|`venueDescriptor` | Customer Office | String | requesting client office |
 | `geopoint` | | | |
-| `location` | | String | Location of the customer office |
-| `address` | | String | Address of the customer office |
+| `location` | | String | Location of the requesting client office |
+| `address` | | String | Address of the requesting client office |
 
 
 - Schedule
@@ -117,7 +117,7 @@ Content-Type: application/json
 
 | Key | Value (default) | Data Type | Description |
 | ----------- | ----------- | ------------| ----------- |
-|`office` | KAVYA COSMETICS | String | name of the requesting office  |
+|`office` | KAVYA COSMETICS | String | name of the requesting client office  |
 
 
 - share
@@ -131,28 +131,28 @@ Content-Type: application/json
 
 | Key | Value (default) | Data Type | Description |
 | ----------- | ----------- | ------------| ----------- |
-|`template` | customer | string |   |
+|`template` | customer | string | structure of the API call, here Demand/customer |
 
 
 - attachements
 
 | Key | Value (default) | Data Type | Description |
 | ----------- | ----------- | ------------| ----------- |
-| `firstConatctEmail` | deepshikha@gmail.com | String | email id of the customer |
+| `firstConatctEmail` | deepika_rajwar@gmail.com| String | email id of the customer |
 | `gstNumber` | 08ATVPB5427E1ZL | gst (String) | valid gst number of the customer |
-| `supplierAddress` | empty | String | Address of the supplier |
+| `supplierAddress` | empty | String | Address of the customer |
 | `tds` | 0 | number/int/float | tds to be applied |
 | `moratium` | 0 | number/int/float | |
-| `firstConatctName` | Deepika Rajwar | String | Name/office name of the supplier |
-| `earlyPaymentRate` | 0 | number/int/float | |
-| `firstContact` | +918753733567 | phone number | phone number of the supplier |
-| `vendorCode` | can be empty | String | vendor code given by the requesting office |
+| `firstConatctName` | Deepika Rajwar | String | Name/office name of the customer |
+| `earlyPaymentRate` | 50 | number/int/float | |
+| `firstContact` | +917668235469 | phone number | phone number of the customer |
+| `vendorCode` | Deepshikha Packaging Solutions Private Limited | String | vendor code given by the requesting client office |
 
 
 
 ### Response
 
-Upon successful execution of the Create Customer API, the API will return a response containing the newly created customer's unique identifier or any other relevant information associated with the customer.
+Upon successful execution of the Create Customer API, the API will return a response containing the newly created customer's `activityID` or any other relevant information associated with the customer.
 
 - **201 - Created** 
 ```json 

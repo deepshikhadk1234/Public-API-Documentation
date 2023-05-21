@@ -72,11 +72,11 @@ Content-Type: application/json
         },
         "totalAmount": {
             "type": "number",
-            "value": 205000
+            "value": 207500
         },
         "sgst": {
             "type": "number",
-            "value": 2500
+            "value": 0
         },
         "billingCustomer": {
             "type": "gst",
@@ -88,7 +88,7 @@ Content-Type: application/json
         },
         "cgst": {
             "type": "number",
-            "value": 2500
+            "value": 0
         },
         "moratium": {
             "type": "number",
@@ -96,7 +96,7 @@ Content-Type: application/json
         },
         "igst": {
             "type": "number",
-            "value": 0
+            "value": 2500
         }
     },
     "office": "SEHRAWAT TRANSPORT SERVICE"
@@ -128,7 +128,9 @@ Content-Type: application/json
 
 | Key | Value (default) | Data Type | Description |
 | ----------- | ----------- | ------------| ----------- |
-|`schedule` |  | array | schedule  |
+|`name` | Invoice Date | string | date of the invoice added  |
+| `startTime` | 1682899381000 | number | |
+| `endTime` | 1682899391000 | number | |
 
 - Venue 
 
@@ -146,14 +148,14 @@ Content-Type: application/json
 | `irn` | can be empty | String | invoice referrence number |
 | `dueDate` | 1687804200000 | String | due date for payment |
 | `cgst` | 0 | number/int/float | value of the cgst to be applied depending upon the gst number of the buyer and seller |
-| `igst` | 9900 | number/int/float | value of the igst to be applied |
-| `billingDate` | 0 | number/int/float | date of the |
-| `totalAmount` | 64900 | number | total amount on the invoice |
-| `billingCustomer` | 22AACCB1450G1ZD | gst number | gst number of the billing customer/buyer |
+| `igst` | 2500 | number/int/float | value of the igst to be applied |
+| `billingDate` | 1682899381000 | number/int/float | date of the bills added |
+| `totalAmount` | 207500 | number | total amount on the invoice |
+| `billingCustomer` | 03EOTPS2048P1Z4 | gst number | gst number of the billing customer/buyer |
 | `moratium` | 0 | number/int/float |  |
 | `narration` | can be empty | String | |
-| `billingBranch` | 27AAQFK7480A1Z4 | gst-office | gst number of the requesting office/seller |
-| `name` | KC/23-24/305123123 | String | vendor code |
+| `billingBranch` | 07APTPS2670G1ZD | gst-office | gst number of the requesting office/seller |
+| `name` | BILL/2023/06 | String | vendor code |
 
 - office
 
