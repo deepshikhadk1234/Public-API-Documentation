@@ -11,8 +11,7 @@
 ----
 | ERRORs LISTED | Error Description | Errors in Templates|
 |-------------|--------------|---------|
-|
-`The 'template' field is missing from the request body.` | Template is Mandatory in the Request Body. | Demand/Customer 
+| `The 'template' field is missing from the request body.` | Template is Mandatory in the Request Body. | Demand/Customer 
 | `Expected 'template' field to have a value of type 'string'. Found ${typeof body.template}.` | Template should be type String. | Demand / customer
 | `The 'gstNumber' field is missing from the request body's attachment.` | gstNumber is Mandatory in Request Body’s Attachment. | Demand / customer
 | `The 'gstNumber' field is Invalid.` | gstNumber is invalid | customer
@@ -27,10 +26,10 @@
 | `The 'totalAmount' field is missing from the request body's attachment.` | totalAmount is Mandatory in Request Body’s Attachment. | demand
 | `The 'name' field is missing from the request body's attachment.` | Name is Mandatory in Request Body’s Attachment. |demand
 | `The 'office' field is missing from the request body.` | Office field is mandatory. | Demand/customer
-| `The 'office' field should be a non-empty string. | Office is mandatory. i.e. Contains Office Name | Demand/customer
+| `The 'office' field should be a non-empty string.` | Office is mandatory. i.e. Contains Office Name | Demand/customer
 | `The 'share' field is missing from the request body.` | Share is missing from Request Body. | Demand/customer
 | `The field 'attachment' is missing from the request body.` | Attachment is missing from Request Body. | Demand/customer
-| The 'share' field in the request body should be an 'array'. | Share field should be in Array Format Containing Numbers. [ Created by Locals ] | Demand/create
+| `The 'share' field in the request body should be an 'array'.` | Share field should be in Array Format Containing Numbers. [ Created by Locals ] | Demand/create
 | `${phoneNumber} is invalid. Please contact support` | PhoneNumber is not Valid | Demand/create
 
 
