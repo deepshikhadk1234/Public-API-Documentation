@@ -1,5 +1,15 @@
 # Error Listings for APIs
 
+ This documentation provides detailed information about the possible error responses that you may encounter while interacting with our API. Understanding these error responses will help you handle and troubleshoot issues effectively.
+
+## Error Response Format
+
+In our API, error responses are returned in JSON format. Each error response typically includes the following properties:
+
+- `message`: A human-readable message providing additional details about the error.
+- `success`: The message showing the success of the request call as **True/False**
+- `status`: The HTTP status code indicating the nature of the error.
+
 ## Create and Update Demand / Customer
 | ERRORs LISTED | Error Description | Errors in Templates|
 |-------------|--------------|---------|

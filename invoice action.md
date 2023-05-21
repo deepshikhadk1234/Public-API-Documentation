@@ -8,34 +8,28 @@ To create a demand for an existing office the following fields information are i
 - `payment_due_date`
 - `tds`
 - `subtotal`
-- `cgst_amount`
-- `igst_amount`
-- `sgst_amount`
+- (`cgst_amount` & `igst_amount`) / `sgst_amount` - depending upon the GST number of buyer and seller
 - `total`
 - `timezone`
 - `buyer`
   - `gst_number`
 - `seller`
   - `gst_number`
-- `po_number`
 - `grn`
-  - `grn_no`
   - `grn_date`
-  - `doc_ref`
 - `payment`
   - `utr_number`
   - `payment_method`
   - `payment_date`
   -  `amount`
-- `stage_completed`
-- `irn`
-- `narration`
-- `moratium`
 
 
 
 ----
 ## Header
+
+**Method : PUT**
+
 ```
 Authorization: Basic {{token}}
 Content-Type: application/json
@@ -91,7 +85,10 @@ Content-Type: application/json
 
 
 ### Response
-- 201 - Created 
+
+Upon successful execution of the Create Customer API, the API will return a response containing the newly created customer's unique identifier or any other relevant information associated with the customer.
+
+- **201 - Created**
 ```json 
 {
     "activityId": "tCjCYULZVQLVHlXbAGmB",
@@ -105,7 +102,14 @@ Content-Type: application/json
 
 ----
 ## Error Response
-- 403 - Forbidden 
+
+In case of errors during the API call, you may receive one of the following error responses:
+
+1. Unauthorized Error: Occurs when the request lacks valid authentication or authorization credentials.
+
+2. Server Error: Indicates an unexpected error on the server side, such as a database connection issue or an unhandled exception.
+
+- **403 - Forbidden** 
 ```json
 {
     "message": "Customer with GST is already exists with this Office",
@@ -113,3 +117,5 @@ Content-Type: application/json
     "code": 403
 }
 ```
+
+### Please refer for more detailed errors list ([click here](./errors.md#create)).

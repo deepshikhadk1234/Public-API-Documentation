@@ -1,6 +1,9 @@
 # Create Customer
 
-The following API will create customer for the requesting office. Only registered clients have the access to create customers and demand. 
+The API provided below enables the creation of customers for the requesting office. Access to create customers and demands is limited to the offices registered with our platform.
+
+Customer can be either a buyer or seller.
+
 ### Important fields:
 To create a customer/client for an existing office the following fields information are important.
 - `office`
@@ -12,6 +15,8 @@ To create a customer/client for an existing office the following fields informat
 
 ----
 ## Header
+
+**Method : PUT**
 ```
 Authorization: Basic {{token}}
 Content-Type: application/json
@@ -146,7 +151,10 @@ Content-Type: application/json
 
 
 ### Response
-- 201 - Created 
+
+Upon successful execution of the Create Customer API, the API will return a response containing the newly created customer's unique identifier or any other relevant information associated with the customer.
+
+- **201 - Created** 
 ```json 
 {
     "activityId": "tCjCYULZVQLVHlXbAGmB",
@@ -161,7 +169,13 @@ Content-Type: application/json
 ----
 ## Error Response
 
-- 400 - Bad Request
+In case of errors during the API call, you may receive one of the following error responses:
+
+1. Unauthorized Error: Occurs when the request lacks valid authentication or authorization credentials.
+
+2. Server Error: Indicates an unexpected error on the server side, such as a database connection issue or an unhandled exception.
+
+- **400 - Bad Request**
 ```json
 {
     "message": "The 'firstContactEmail' is Invalid.",
@@ -186,7 +200,8 @@ Content-Type: application/json
 }
 ```
 ------
-- 403 - Forbidden 
+
+- **403 - Forbidden**
 ```json
 {
     "message": "Customer with GST is already exists with this Office",
@@ -196,4 +211,4 @@ Content-Type: application/json
 ```
 -----
 
-### For more detailed errors [click here](./errors.md#createdemand).
+### Please refer for more detailed errors list ([click here](./errors.md#create)).

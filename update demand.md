@@ -16,6 +16,9 @@ To update a demand the following fields information are important.
 
 ----
 ## Header
+
+**Method : PUT**
+
 ```
 Authorization: Bearer {{token}}
 Content-Type: application/json
@@ -184,7 +187,10 @@ Content-Type: application/json
 ------
 
 ### Response
-- 201 - Created 
+
+Upon successful execution of the Create Customer API, the API will return a response containing the newly created customer's unique identifier or any other relevant information associated with the customer.
+
+- **201 - Created**
 ```json 
 {
     "activityId": "wTtWcTBccQDQ8pXRsfLw",
@@ -200,6 +206,11 @@ Content-Type: application/json
 
 ## Error Response
 
+In case of errors during the API call, you may receive one of the following error responses:
+
+1. Unauthorized Error: Occurs when the request lacks valid authentication or authorization credentials.
+
+2. Server Error: Indicates an unexpected error on the server side, such as a database connection issue or an unhandled exception.
 
 ### For more detailed errors [click here](./errors.md#update).
 
