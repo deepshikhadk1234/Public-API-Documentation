@@ -7,21 +7,22 @@ Welcome to the API documentation for the Customer Management and Demand Tracking
 
 Endpoint: `PUT /activities/create`
 
-Description: This API allows you to create a new customer in the system. It provides a simple way to add customer details such as name, contact information, and other relevant information. Upon successful execution, the API will return the newly created customer's unique identifier.
+Description: This API allows you to create a new customer in the system. Customer represents a client (buyer) or a vendor. It provides a simple way to add customer details such as name, contact information, and other relevant information like credit period and TDS amount. Upon successful execution, the API will return the newly created customer's unique identifier.
+
 
 ### Create Demand API
 
 Endpoint: `PUT /activities/create`
 
-Description: With this API, you can generate a new demand record within the system. A demand represents a request or requirement made by a customer for a particular product or service. By providing the necessary inputs, such as customer ID, product details, and quantities, you can create a demand entry. The API will return a demand ID upon successful execution.
+Description: With this API, you can create a new demand record within the system. A demand represents an invoice that was raised by vendor for a particular product or service. By providing the necessary inputs, such as Client GSTIN, Seller GSTIN, Invoice date, Taxable amount, all GST amounts, Total amount, TDS and Due date, you can create a demand entry. The API will return a demand activity ID upon successful execution.
+
 
 
 ### Update Demand API
 
 Endpoint: `PUT /activities/update`
 
-Description: This API allows you to update an existing demand in the system. By specifying the demand ID in the endpoint URL and providing the necessary updated information, such as revised quantities or product details, you can modify the demand as required. This API helps you manage changes and keep demand records up to date.
-
+Description: This API allows you to update an existing demand in the system. By specifying the demand ID in the endpoint URL and providing the necessary updated information, such as partial payment details, full payment details, you can modify the demand as required. This API helps you manage changes and keep demand records up to date.
 ### Invoice Action API
 
 Endpoint: `PUT /invoice-action`
@@ -34,6 +35,18 @@ We hope this API documentation helps you effectively integrate and leverage the 
 
 ----
 ## Streams
+
+- Customer
+    - [create_customer](/Customer/create_customer.md) - APIs to create new customer/office 
+- Demand
+    - [create_demand](/Demand/create_demand.md) - APIs to create new demand
+    - [update_demand](/Demand/update_demand.md) - APIs to update any existing demand
+- Invoice Action 
+    - [invoice_action](/Invoice%20Action/invoice_action.md) - APIs for invoice action
+- Errors
+    - [errors](/Errors/errors.md) - Error listing and Handling
+        
+        
 
 ----
 
