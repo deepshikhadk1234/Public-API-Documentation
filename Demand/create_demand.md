@@ -126,12 +126,12 @@ curl --location --request PUT 'baseURL' \
     | Key | Value (default) | Data Type | Description |
     | ----------- | ----------- | ------------| ----------- |
     |`name` | Invoice Date | string | date of the invoice added  |
-    | `startTime` | 1682899381000 | number | |
-    | `endTime` | 1682899391000 | number | |
+    | `startTime` | 1682899381000 | number | time of the invoice creation |
+    | `endTime` | 1682899391000 | number | time of the invoice creation |
 
 | Key | Value (default) | Data Type | Description |
 | ----------- | ----------- | ------------| ----------- |
-|`venue` |  | array |   |
+|`venue` | empty array | array | venue/address of the requesting office  |
 
 
 - `attachements`
@@ -139,7 +139,7 @@ curl --location --request PUT 'baseURL' \
     | Key | Value (default) | Data Type | Description |
     | ----------- | ----------- | ------------| ----------- |
     | `sgst` | 0 | number/int/float | value of the sgst to be applied depending upon the gst number of the buyer and seller |
-    | `tds` | 0 | number/int/float | value of the tds |
+    | `tds` | 0 | number/int/float | tds to be applied |
     | `irn` | can be empty | String | invoice referrence number |
     | `dueDate` | 1687804200000 | String | due date for payment |
     | `cgst` | 0 | number/int/float | value of the cgst to be applied depending upon the gst number of the buyer and seller |
@@ -147,8 +147,8 @@ curl --location --request PUT 'baseURL' \
     | `billingDate` | 1682899381000 | number/int/float | date of the bills added |
     | `totalAmount` | 207500 | number | total amount on the invoice |
     | `billingCustomer` | 03EOTPS2048P1Z4 | gst number | gst number of the billing customer/buyer |
-    | `moratium` | 0 | number/int/float |  |
-    | `narration` | can be empty | String | |
+    | `moratium` | 0 | number/int/float | credit days |
+    | `narration` | can be empty | String | comments added |
     | `billingBranch` | 07APTPS2670G1ZD | gst-office | gst number of the requesting office/seller |
     | `name` | BILL/2023/06 | String | vendor code |
 

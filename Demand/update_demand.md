@@ -113,12 +113,12 @@ curl --location --request PUT 'baseURL' \
 
 | Key | Value | Data Type | Description |
 | ----------- | ----------- | ------------| ----------- |
-|`share` | empty | array | |
+|`share` | empty array | array | sharable documents |
 |`timestamp` | 1683971979663 | number | time of the creation |
-|`template` | demand | String |  |
+|`template` | demand | String | structure of the API call, here Demand/customer |
 |`activityId` | K3rsy45zrls0kVANgbkh | String | activity id  |
-|`schedule` |  | array | schedule  |
-|`venue` |  | array |   |
+|`schedule` |  | array | schedule |
+|`venue` |  | array |  |
 
 
 - `attachements`
