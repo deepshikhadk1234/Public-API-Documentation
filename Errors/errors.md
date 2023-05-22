@@ -39,10 +39,6 @@ In our API, error responses are returned in JSON format. Each error response typ
 | ERRORs LISTED | Error Description | Errors in Templates|
 |-------------|--------------|---------|
 | `The 'gstNumber' field is Invalid.` | gstNumber is invalid | customer
-| `The 'firstContactEmail' field is missing from the request body's attachment.` | firstContactEmail is Mandatory in Request Body’s Attachment. | customer |
-| `The 'firstContactEmail' is Invalid.` | firstContactEmail contains an Invalid Mail. | customer |
-| `The 'firstContactName' field is missing from the request body's attachment.` | firstContactName is Mandatory in Request Body’s Attachment. | customer 
-| `The 'firstContactName' field should be a non-empty string.` | firstContactName should be non-Empty. | customer
 | `The 'firstContact' field is missing from the request body's attachment.` | firstContact ~ phone is Mandatory in Request Body’s Attachment. | customer
 | `'${body.attachment.firstContact}' is Invalid.` | firstContact ~ phone is Invalid. | customer |
 
@@ -73,6 +69,16 @@ In our API, error responses are returned in JSON format. Each error response typ
 |-------------|--------------|---------|
 | `The 'activityId' field is missing from the request body.` | activityId is missing from the Request Body. | Demand
 | `The 'activityId' field should be a non-empty string.` | activityId should be non-empty | Demand
+
+
+
+
+
+
+
+
+
+
 
 
 
