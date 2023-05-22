@@ -14,14 +14,19 @@ To create a demand for an existing office the following fields information are i
 
 
 ----
-## Header
+## Request Example
+
+### Header
 
 **Method : PUT**
 
-```
-Authorization: Basic {{token}}
-Content-Type: application/json
+```json
+curl --location --request PUT 'baseURL' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: {{token}} \
+--data '{"field1":"value1","field2":"value2"}'
   ```
+
 | Key | Value | Data Type | Description |
 | ----------- | ----------- | ------------| ----------- |
 | `Authorization` | Basic {{token}} | String | Token generated from login |
@@ -29,9 +34,8 @@ Content-Type: application/json
 
 ----
 ----
-## Body
+### Body Parameters
 
-### Request (Code View)
 ```json
 {
     "share": [],
@@ -104,7 +108,7 @@ Content-Type: application/json
 ```
 -------
 
-### Form View
+### Attributes
 - Share
 
 | Key | Value | Data Type | Description |
@@ -165,7 +169,7 @@ Content-Type: application/json
 
 ------
 
-### Response
+## Response Example
 
 Upon successful execution of the Create Customer API, the API will return a response containing the newly created customer's unique identifier or any other relevant information associated with the customer.
 

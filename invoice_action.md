@@ -26,13 +26,17 @@ To create a demand for an existing office the following fields information are i
 
 
 ----
-## Header
+## Request Example
+
+### Header
 
 **Method : PUT**
 
-```
-Authorization: Basic {{token}}
-Content-Type: application/json
+```json
+curl --location --request PUT 'baseURL' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: {{token}} \
+--data '{"field1":"value1","field2":"value2"}'
   ```
 | Key | Value | Data Type | Description |
 | ----------- | ----------- | ------------| ----------- |
@@ -41,9 +45,8 @@ Content-Type: application/json
 
 ----
 ----
-## Body
+### Body Parameters
 
-### Request
 ```json
 {
   "invoice_number": "ADS742-10237439612qq1234",
@@ -80,11 +83,63 @@ Content-Type: application/json
   "moratium": 2
 }
 ```
+### Attributes
 
+| Key | Value | Data Type | Description |
+| ----------- | ----------- | ------------| ----------- |
+| `invoice_number` | ADS742-10237439612qq1234 | string | invoice number 
+| `invoice_date` | 1660791539574 | number | date of the invoice created
+| `payment_due_date` | 1660791539574 | number | due date of the invoice 
+| `tds` | 2 | number | tds to be applied
+| `subtotal` | 1000 | int/float/number | sub-total of the amount 
+| `cgst_amount` | 180 | int/float/number | cgst amount to be applied
+| `igst_amount` | 180 | int/float/number | igst to be applied
+| `sgst_amount` | 0 | int/float/number | sgst to be applied
+| `total` | 1360 | int/float/number | total amount 
+| `timezone` | Asia/Kolkata | string | timezone 
 
+- `buyer`
 
+| Key | Value | Data Type | Description |
+| ----------- | ----------- | ------------| ----------- |
+| `gst_number` | 33AAECT8346F1ZB | string | gst number of the buyer
 
-### Response
+- `seller`
+
+| Key | Value | Data Type | Description |
+| ----------- | ----------- | ------------| ----------- |
+| `gst_number` | 07BOXPS1970R1ZM | string | gst number of the seller
+
+| Key | Value | Data Type | Description |
+| ----------- | ----------- | ------------| ----------- |
+| `po_number` | | string | |
+
+- `grn` 
+
+| Key | Value | Data Type | Description |
+| ----------- | ----------- | ------------| ----------- |
+| `grn_no` | | | |
+| `grn_date` | 234324234 | int/float/number | |
+| `doc_ref` | | string | |
+
+- `payment`
+
+| Key | Value | Data Type | Description |
+| ----------- | ----------- | ------------| ----------- |
+| `utr_number` | UTR | string | |
+| `payment_method` | METHOD | string | |
+| `payment_date` | 3244234 | int/float/number | |
+| `amount` | 2334 | int/float/number | |
+
+| Key | Value | Data Type | Description |
+| ----------- | ----------- | ------------| ----------- |
+| `stage_completed` | | | |
+| `irn` | | | |
+| `narration` | | | |
+| `moratium` | 2 | | |
+
+-----
+## Response Example
 
 Upon successful execution of the Create Customer API, the API will return a response containing the newly created customer's unique identifier or any other relevant information associated with the customer.
 

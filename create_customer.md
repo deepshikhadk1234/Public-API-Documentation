@@ -14,12 +14,17 @@ To create a customer/client for an existing office the following fields informat
 
 
 ----
-## Header
+## Request Example
+
+### Header
 
 **Method : PUT**
-```
-Authorization: Basic {{token}}
-Content-Type: application/json
+```json
+curl --location --request PUT 'baseURL' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: {{token}} \
+--data '{"field1":"value1","field2":"value2"}'
+
   ```
 | Key | Value | Data Type | Description |
 | ----------- | ----------- | ------------| ----------- |
@@ -28,9 +33,9 @@ Content-Type: application/json
 
 
 ----
-## Body
+### Body Parameters
 
-### Request
+
 ```json
 {
     "timestamp": 1683971721265,
@@ -89,6 +94,9 @@ Content-Type: application/json
     }
 }
 ```
+
+
+### Attributes
 
 - Time Stamp
 
@@ -150,7 +158,7 @@ Content-Type: application/json
 
 
 
-### Response
+## Response Example
 
 Upon successful execution of the Create Customer API, the API will return a response containing the newly created customer's `activityID` or any other relevant information associated with the customer.
 
