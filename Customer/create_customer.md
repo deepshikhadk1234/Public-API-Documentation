@@ -98,63 +98,46 @@ curl --location --request PUT 'baseURL' \
 
 ### Attributes
 
-- Time Stamp
-
 | Key | Value | Data Type | Description |
 | ----------- | ----------- | ------------| ----------- |
 |`timestamp` | 1683971721265 | number | time of the creation |
 
-- Venue
+- `venue`
 
-| Key | Value (default) | Data Type | Description |
-| ----------- | ----------- | ------------| ----------- |
-|`venueDescriptor` | Customer Office | String | requesting client office |
-| `geopoint` | | | |
-| `location` | | String | Location of the requesting client office |
-| `address` | | String | Address of the requesting client office |
+    Sub-Attributes
+
+    | Key | Value (default) | Data Type | Description |
+    | ----------- | ----------- | ------------| ----------- |
+    |`venueDescriptor` | Customer Office | String | requesting client office |
+    | `geopoint` | | | |
+    | `location` | | String | Location of the requesting client office |
+    | `address` | | String | Address of the requesting client office |
 
 
-- Schedule
 
 | Key | Value (default) | Data Type | Description |
 | ----------- | ----------- | ------------| ----------- |
 |`schedule` | can be empty | array | schedule  |
-
-
-- office
-
-| Key | Value (default) | Data Type | Description |
-| ----------- | ----------- | ------------| ----------- |
 |`office` | KAVYA COSMETICS | String | name of the requesting client office  |
-
-
-- share
-
-| Key | Value (default) | Data Type | Description |
-| ----------- | ----------- | ------------| ----------- |
 |`share` | can be empty | array |   |
-
-
-- template
-
-| Key | Value (default) | Data Type | Description |
-| ----------- | ----------- | ------------| ----------- |
 |`template` | customer | string | structure of the API call, here Demand/customer |
 
 
-- attachements
+- `attachements`
 
-| Key | Value (default) | Data Type | Description |
-| ----------- | ----------- | ------------| ----------- |
-| `firstConatctEmail` | deepika_rajwar@gmail.com| String | email id of the customer |
-| `gstNumber` | 08ATVPB5427E1ZL | gst (String) | valid gst number of the customer |
-| `supplierAddress` | empty | String | Address of the customer |
-| `tds` | 0 | number/int/float | tds to be applied |
-| `moratium` | 0 | number/int/float | |
-| `firstConatctName` | Deepika Rajwar | String | Name/office name of the customer |
-| `earlyPaymentRate` | 50 | number/int/float | |
-| `firstContact` | +917668235469 | phone number | phone number of the customer |
-| `vendorCode` | Deepshikha Packaging Solutions Private Limited | String | vendor code given by the requesting client office |
+    Sub-Attributes
+
+    | Key | Value (default) | Data Type | Description |
+    | ----------- | ----------- | ------------| ----------- |
+    | `firstConatctEmail` | deepika_rajwar@gmail.com| String | email id of the customer |
+    |   `gstNumber` | 08ATVPB5427E1ZL | gst (String) | valid gst number of the customer |
+    | `supplierAddress` | empty | String | Address of the customer |
+    | `tds` | 0 | number/int/float | tds to be applied |
+    | `moratium` | 0 | number/int/float | Credit days |
+    | `firstConatctName` | Deepika Rajwar | String | Name/office name of the customer |
+    | `earlyPaymentRate` | 50 | number/int/float | Rs. per lakh per day |
+    | `firstContact` | +917668235469 | phone number | phone number of the customer |
+    | `vendorCode` | Deepshikha Packaging Solutions Private Limited | String | vendor code given by the requesting client office |
 
 
 
@@ -186,14 +169,6 @@ In case of errors during the API call, you may receive one of the following erro
 - **400 - Bad Request**
 ```json
 {
-    "message": "The 'firstContactEmail' is Invalid.",
-    "success": false,
-    "code": 400
-}
-```
-
-```json
-{
     "message": "Invalid value for the field 'gstNumber' in attachment object",
     "success": false,
     "code": 400
@@ -202,7 +177,7 @@ In case of errors during the API call, you may receive one of the following erro
 
 ```json
 {
-    "message": "The 'firstContactName' field should be a non-empty string.",
+    "message": "The 'firstContact' field should be a non-empty string.",
     "success": false,
     "code": 400
 }
@@ -219,4 +194,4 @@ In case of errors during the API call, you may receive one of the following erro
 ```
 -----
 
-### Please refer for more detailed errors list ([click here](./errors.md#create)).
+### Please refer for more detailed errors list ([*click here*](/Errors/errors.md#create)).

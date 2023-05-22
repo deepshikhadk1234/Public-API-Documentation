@@ -111,63 +111,33 @@ curl --location --request PUT 'baseURL' \
 
 ### Attributes
 
-- Share
-
 | Key | Value | Data Type | Description |
 | ----------- | ----------- | ------------| ----------- |
 |`share` | empty | array | |
-
-- Time Stamp
-
-| Key | Value | Data Type | Description |
-| ----------- | ----------- | ------------| ----------- |
 |`timestamp` | 1683971979663 | number | time of the creation |
-
-- Template
-
-| Key | Value | Data Type | Description |
-| ----------- | ----------- | ------------| ----------- |
 |`template` | demand | String |  |
-
-- Activity Id
-
-| Key | Value (default) | Data Type | Description |
-| ----------- | ----------- | ------------| ----------- |
 |`activityId` | K3rsy45zrls0kVANgbkh | String | activity id  |
-
-
-- Schedule
-
-| Key | Value (default) | Data Type | Description |
-| ----------- | ----------- | ------------| ----------- |
 |`schedule` |  | array | schedule  |
-
-- Venue 
-
-| Key | Value (default) | Data Type | Description |
-| ----------- | ----------- | ------------| ----------- |
 |`venue` |  | array |   |
 
 
-- attachements
+- `attachements`
 
-| Key | Value (default) | Data Type | Description |
-| ----------- | ----------- | ------------| ----------- |
-| `sgst` | 0 | number/int/float | value of the sgst |
-| `tds` | 0 | number/int/float | value of the tds |
-| `irn` | can be empty | String |  |
-| `dueDate` | 1687804200000 | String | due date for payment |
-| `cgst` | 0 | number/int/float | value of the cgst |
-| `igst` | 9900 | number/int/float | value of the igst |
-| `billingDate` | 0 | number/int/float | |
-| `totalAmount` | 64900 | number | total amount on the invoice |
-| `billingCustomer` | 22AACCB1450G1ZD | gst number | gst number of the billing customer |
-| `moratium` | 0 | number/int/float |  |
-| `narration` | can be empty | String | |
-| `billingBranch` | 27AAQFK7480A1Z4 | gst-office | gst number of the requesting customer |
-| `name` | KC/23-24/305123123 | String | vendor code |
-
-- office
+    | Key | Value (default) | Data Type | Description |
+    | ----------- | ----------- | ------------| ----------- |
+    | `sgst` | 0 | number/int/float | value of the sgst |
+    | `tds` | 0 | number/int/float | value of the tds |
+    | `irn` | can be empty | String |  |
+    | `dueDate` | 1687804200000 | String | due date for payment |
+    | `cgst` | 0 | number/int/float | value of the cgst |
+    | `igst` | 9900 | number/int/float | value of the igst |
+    | `billingDate` | 0 | number/int/float | |
+    | `totalAmount` | 64900 | number | total amount on the invoice |
+    | `billingCustomer` | 22AACCB1450G1ZD | gst number | gst number of the billing customer |
+    | `moratium` | 0 | number/int/float |  |
+    | `narration` | can be empty | String | |
+    | `billingBranch` | 27AAQFK7480A1Z4 | gst-office | gst number of the requesting customer |
+    | `name` | KC/23-24/305123123 | String | vendor code |
 
 | Key | Value (default) | Data Type | Description |
 | ----------- | ----------- | ------------| ----------- |
@@ -201,7 +171,7 @@ In case of errors during the API call, you may receive one of the following erro
 
 2. Server Error: Indicates an unexpected error on the server side, such as a database connection issue or an unhandled exception.
 
-### For more detailed errors [click here](./errors.md#update).
+### For more detailed errors [*click here*](/Errors/errors.md#update).
 
 
 

@@ -52,12 +52,12 @@ curl --location --request PUT 'baseURL' \
   "invoice_number": "ADS742-10237439612qq1234",
   "invoice_date": 1660791539574,
   "payment_due_date": 1660791539574,
-  "tds": 2,
-  "subtotal": 1000,
+  "tds": 200,
+  "subtotal": 1200,
   "cgst_amount": 180,
   "igst_amount": 180,
   "sgst_amount": 0,
-  "total": 1360,
+  "total": 1560,
   "timezone": "Asia/Kolkata",
   "buyer": {
     "gst_number": "33AAECT8346F1ZB"
@@ -90,53 +90,60 @@ curl --location --request PUT 'baseURL' \
 | `invoice_number` | ADS742-10237439612qq1234 | string | invoice number 
 | `invoice_date` | 1660791539574 | number | date of the invoice created
 | `payment_due_date` | 1660791539574 | number | due date of the invoice 
-| `tds` | 2 | number | tds to be applied
-| `subtotal` | 1000 | int/float/number | sub-total of the amount 
+| `tds` | 200 | number | tds to be applied
+| `subtotal` | 1200 | int/float/number | sub-total of the amount 
 | `cgst_amount` | 180 | int/float/number | cgst amount to be applied
 | `igst_amount` | 180 | int/float/number | igst to be applied
 | `sgst_amount` | 0 | int/float/number | sgst to be applied
-| `total` | 1360 | int/float/number | total amount 
+| `total` | 1560 | int/float/number | total amount 
 | `timezone` | Asia/Kolkata | string | timezone 
 
 - `buyer`
 
-| Key | Value | Data Type | Description |
-| ----------- | ----------- | ------------| ----------- |
-| `gst_number` | 33AAECT8346F1ZB | string | gst number of the buyer
+  Sub-Attributes
+
+  | Key | Value | Data Type | Description |
+  | ----------- | ----------- | ------------| ----------- |
+  | `gst_number` | 33AAECT8346F1ZB | string | gst number of the buyer
 
 - `seller`
 
-| Key | Value | Data Type | Description |
-| ----------- | ----------- | ------------| ----------- |
-| `gst_number` | 07BOXPS1970R1ZM | string | gst number of the seller
+  Sub-Attributes
+  | Key | Value | Data Type | Description |
+  | ----------- | ----------- | ------------| ----------- |
+  | `gst_number` | 07BOXPS1970R1ZM | string | gst number of the seller
 
 | Key | Value | Data Type | Description |
 | ----------- | ----------- | ------------| ----------- |
-| `po_number` | | string | |
+| `po_number` | | string | purchase order number |
 
 - `grn` 
 
-| Key | Value | Data Type | Description |
-| ----------- | ----------- | ------------| ----------- |
-| `grn_no` | | | |
-| `grn_date` | 234324234 | int/float/number | |
-| `doc_ref` | | string | |
+  Sub-Attributes
+
+  | Key | Value | Data Type | Description |
+  | ----------- | ----------- | ------------| ----------- |
+  | `grn_no` | | string | goods received notes |
+  | `grn_date` | 234324234 | int/float/number | date on which the goods were received |
+  | `doc_ref` | | string | referrence ID |
 
 - `payment`
 
-| Key | Value | Data Type | Description |
-| ----------- | ----------- | ------------| ----------- |
-| `utr_number` | UTR | string | |
-| `payment_method` | METHOD | string | |
-| `payment_date` | 3244234 | int/float/number | |
-| `amount` | 2334 | int/float/number | |
+  Sub-Attributes
+
+  | Key | Value | Data Type | Description |
+  | ----------- | ----------- | ------------| ----------- |
+  | `utr_number` | UTR | string | Unique Transaction Reference number 
+  | `payment_method` | METHOD | string | method of payment |
+  | `payment_date` | 3244234 | int/float/number | Date of Payement |
+  | `amount` | 2334 | int/float/number | Amount paid |
 
 | Key | Value | Data Type | Description |
 | ----------- | ----------- | ------------| ----------- |
-| `stage_completed` | | | |
-| `irn` | | | |
-| `narration` | | | |
-| `moratium` | 2 | | |
+| `stage_completed` | null | | |
+| `irn` | can be empty string| string | invoice referrence number |
+| `narration` | can be empty string | string | comments added |
+| `moratium` | 2 | number | credit days |
 
 -----
 ## Response Example
@@ -173,4 +180,4 @@ In case of errors during the API call, you may receive one of the following erro
 }
 ```
 
-### Please refer for more detailed errors list ([click here](./errors.md#create)).
+### Please refer for more detailed errors list ([*click here*](/Errors/errors.md)).
