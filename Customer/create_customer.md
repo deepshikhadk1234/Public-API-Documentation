@@ -101,6 +101,10 @@ curl --location --request PUT 'baseURL' \
 | Key | Value | Data Type | Description |
 | ----------- | ----------- | ------------| ----------- |
 |`timestamp` | 1683971721265 | number | time of the creation |
+|`schedule` | can be empty | array | schedule  |
+|`office` | KAVYA COSMETICS | String | name of the requesting client office  |
+|`share` | can be empty | array |   |
+|`template` | customer | string | structure of the API call, here Demand/customer |
 
 - `venue`
 
@@ -113,14 +117,6 @@ curl --location --request PUT 'baseURL' \
     | `location` | | String | Location of the requesting client office |
     | `address` | | String | Address of the requesting client office |
 
-
-
-| Key | Value (default) | Data Type | Description |
-| ----------- | ----------- | ------------| ----------- |
-|`schedule` | can be empty | array | schedule  |
-|`office` | KAVYA COSMETICS | String | name of the requesting client office  |
-|`share` | can be empty | array |   |
-|`template` | customer | string | structure of the API call, here Demand/customer |
 
 
 - `attachements`

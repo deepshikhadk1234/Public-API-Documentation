@@ -119,6 +119,7 @@ curl --location --request PUT 'baseURL' \
 |`activityId` | K3rsy45zrls0kVANgbkh | String | activity id  |
 |`schedule` |  | array | schedule |
 |`venue` |  | array |  |
+|`office` | KAVYA COSMETICS | String | name of the requesting office  |
 
 
 - `attachements`
@@ -139,10 +140,7 @@ curl --location --request PUT 'baseURL' \
     | `billingBranch` | 27AAQFK7480A1Z4 | gst-office | gst number of the requesting customer |
     | `name` | KC/23-24/305123123 | String | vendor code |
 
-| Key | Value (default) | Data Type | Description |
-| ----------- | ----------- | ------------| ----------- |
-|`office` | KAVYA COSMETICS | String | name of the requesting office  |
-
+|
 ------
 
 ## Response Example

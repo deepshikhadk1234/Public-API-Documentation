@@ -117,6 +117,8 @@ curl --location --request PUT 'baseURL' \
 |`share` | empty | array | |
 |`timestamp` | 1683971979663 | number | time of the creation |
 |`template` | demand | String | structure of the API call, here Demand/customer |
+|`venue` | empty array | array | venue/address of the requesting office  |
+|`office` | KAVYA COSMETICS | String | name of the requesting office  |
 
 
 - `schedule`
@@ -128,10 +130,6 @@ curl --location --request PUT 'baseURL' \
     |`name` | Invoice Date | string | date of the invoice added  |
     | `startTime` | 1682899381000 | number | time of the invoice creation |
     | `endTime` | 1682899391000 | number | time of the invoice creation |
-
-| Key | Value (default) | Data Type | Description |
-| ----------- | ----------- | ------------| ----------- |
-|`venue` | empty array | array | venue/address of the requesting office  |
 
 
 - `attachements`
@@ -152,10 +150,6 @@ curl --location --request PUT 'baseURL' \
     | `billingBranch` | 07APTPS2670G1ZD | gst-office | gst number of the requesting office/seller |
     | `name` | BILL/2023/06 | String | vendor code |
 
-
-| Key | Value (default) | Data Type | Description |
-| ----------- | ----------- | ------------| ----------- |
-|`office` | KAVYA COSMETICS | String | name of the requesting office  |
 
 ------
 

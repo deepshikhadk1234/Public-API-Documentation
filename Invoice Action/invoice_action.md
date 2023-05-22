@@ -97,6 +97,11 @@ curl --location --request PUT 'baseURL' \
 | `sgst_amount` | 0 | int/float/number | sgst to be applied
 | `total` | 1560 | int/float/number | total amount 
 | `timezone` | Asia/Kolkata | string | timezone 
+| `stage_completed` | null | | |
+| `irn` | can be empty string| string | invoice referrence number |
+| `narration` | can be empty string | string | comments added |
+| `moratium` | 2 | number | credit days |
+| `po_number` | | string | purchase order number |
 
 - `buyer`
 
@@ -113,9 +118,6 @@ curl --location --request PUT 'baseURL' \
   | ----------- | ----------- | ------------| ----------- |
   | `gst_number` | 07BOXPS1970R1ZM | string | gst number of the seller
 
-| Key | Value | Data Type | Description |
-| ----------- | ----------- | ------------| ----------- |
-| `po_number` | | string | purchase order number |
 
 - `grn` 
 
@@ -137,13 +139,6 @@ curl --location --request PUT 'baseURL' \
   | `payment_method` | METHOD | string | method of payment |
   | `payment_date` | 3244234 | int/float/number | Date of Payement |
   | `amount` | 2334 | int/float/number | Amount paid |
-
-| Key | Value | Data Type | Description |
-| ----------- | ----------- | ------------| ----------- |
-| `stage_completed` | null | | |
-| `irn` | can be empty string| string | invoice referrence number |
-| `narration` | can be empty string | string | comments added |
-| `moratium` | 2 | number | credit days |
 
 -----
 ## Response Example
