@@ -1,6 +1,6 @@
 # Invoice Action
 
-The following API will create demand for the requesting office. Only registered clients have the access to create customers and demand. 
+The following API will allow the buyer to update, add grn, payment to the existing invoice. This also helps in the creation of an invoice if it is not already created.
 ### Important fields:
 To create a demand for an existing office the following fields information are important.
 - `invoice_number`
