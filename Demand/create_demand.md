@@ -1,10 +1,9 @@
-# Update Demand 
+# Create Demand
 
-The following API will update demand for the activity ID provide by requesting office. Only registered clients have the access to create customers and demand. 
+The following API will create demand for the requesting office. Only registered clients have the access to create customers and demand. 
 ### Important fields:
-To update a demand the following fields information are important.
+To create a demand for an existing office the following fields information are important.
 - `schedule`
-- `activityId`
 - `dueDate`
 - `name`
 - `billingDate`
@@ -21,15 +20,16 @@ To update a demand the following fields information are important.
 
 **Method : PUT**
 
-```json
+```
 curl --location --request PUT 'baseURL' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: {{token}} \
 --data '{"field1":"value1","field2":"value2"}'
   ```
+
 | Key | Value | Data Type | Description |
 | ----------- | ----------- | ------------| ----------- |
-| `Authorization` | Bearer {{token}} | String | Token generated from login |
+| `Authorization` | Basic {{token}} | String | Token generated from login |
 |`Content-Type `| Application/json | String | application/json |
 
 ----
@@ -41,7 +41,6 @@ curl --location --request PUT 'baseURL' \
     "share": [],
     "timestamp": 1682899381000,
     "template": "demand",
-    "activityId" : "TqfXtxddlWlHqC92Ek9U",
     "schedule": [
         {
             "name": "Invoice Date",
@@ -77,11 +76,11 @@ curl --location --request PUT 'baseURL' \
         },
         "totalAmount": {
             "type": "number",
-            "value": 205000
+            "value": 207500
         },
         "sgst": {
             "type": "number",
-            "value": 2500
+            "value": 0
         },
         "billingCustomer": {
             "type": "gst",
@@ -93,7 +92,7 @@ curl --location --request PUT 'baseURL' \
         },
         "cgst": {
             "type": "number",
-            "value": 2500
+            "value": 0
         },
         "moratium": {
             "type": "number",
@@ -101,7 +100,7 @@ curl --location --request PUT 'baseURL' \
         },
         "igst": {
             "type": "number",
-            "value": 0
+            "value": 2500
         }
     },
     "office": "SEHRAWAT TRANSPORT SERVICE"
@@ -110,7 +109,6 @@ curl --location --request PUT 'baseURL' \
 -------
 
 ### Attributes
-
 - Share
 
 | Key | Value | Data Type | Description |
@@ -127,20 +125,16 @@ curl --location --request PUT 'baseURL' \
 
 | Key | Value | Data Type | Description |
 | ----------- | ----------- | ------------| ----------- |
-|`template` | demand | String |  |
-
-- Activity Id
-
-| Key | Value (default) | Data Type | Description |
-| ----------- | ----------- | ------------| ----------- |
-|`activityId` | K3rsy45zrls0kVANgbkh | String | activity id  |
+|`template` | demand | String | structure of the API call, here Demand/customer |
 
 
 - Schedule
 
 | Key | Value (default) | Data Type | Description |
 | ----------- | ----------- | ------------| ----------- |
-|`schedule` |  | array | schedule  |
+|`name` | Invoice Date | string | date of the invoice added  |
+| `startTime` | 1682899381000 | number | |
+| `endTime` | 1682899391000 | number | |
 
 - Venue 
 
@@ -153,19 +147,19 @@ curl --location --request PUT 'baseURL' \
 
 | Key | Value (default) | Data Type | Description |
 | ----------- | ----------- | ------------| ----------- |
-| `sgst` | 0 | number/int/float | value of the sgst |
+| `sgst` | 0 | number/int/float | value of the sgst to be applied depending upon the gst number of the buyer and seller |
 | `tds` | 0 | number/int/float | value of the tds |
-| `irn` | can be empty | String |  |
+| `irn` | can be empty | String | invoice referrence number |
 | `dueDate` | 1687804200000 | String | due date for payment |
-| `cgst` | 0 | number/int/float | value of the cgst |
-| `igst` | 9900 | number/int/float | value of the igst |
-| `billingDate` | 0 | number/int/float | |
-| `totalAmount` | 64900 | number | total amount on the invoice |
-| `billingCustomer` | 22AACCB1450G1ZD | gst number | gst number of the billing customer |
+| `cgst` | 0 | number/int/float | value of the cgst to be applied depending upon the gst number of the buyer and seller |
+| `igst` | 2500 | number/int/float | value of the igst to be applied |
+| `billingDate` | 1682899381000 | number/int/float | date of the bills added |
+| `totalAmount` | 207500 | number | total amount on the invoice |
+| `billingCustomer` | 03EOTPS2048P1Z4 | gst number | gst number of the billing customer/buyer |
 | `moratium` | 0 | number/int/float |  |
 | `narration` | can be empty | String | |
-| `billingBranch` | 27AAQFK7480A1Z4 | gst-office | gst number of the requesting customer |
-| `name` | KC/23-24/305123123 | String | vendor code |
+| `billingBranch` | 07APTPS2670G1ZD | gst-office | gst number of the requesting office/seller |
+| `name` | BILL/2023/06 | String | vendor code |
 
 - office
 
@@ -201,7 +195,17 @@ In case of errors during the API call, you may receive one of the following erro
 
 2. Server Error: Indicates an unexpected error on the server side, such as a database connection issue or an unhandled exception.
 
-### For more detailed errors [click here](./errors.md#update).
+- **400 - Bad Request**
+```json
+{
+    "message": "the field of type 'gst-office' must belong to the requesting office only",
+    "success": false,
+    "code": 400
+}
+```
 
+-----
+
+### Please refer for more detailed errors list ([click here](./errors.md#create)).
 
 

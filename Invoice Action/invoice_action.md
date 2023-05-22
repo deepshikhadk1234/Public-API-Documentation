@@ -32,7 +32,7 @@ To create a demand for an existing office the following fields information are i
 
 **Method : PUT**
 
-```json
+```
 curl --location --request PUT 'baseURL' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: {{token}} \

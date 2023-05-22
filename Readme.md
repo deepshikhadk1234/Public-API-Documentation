@@ -34,13 +34,7 @@ We hope this API documentation helps you effectively integrate and leverage the 
 
 ----
 ## Streams
-| Name           | Description |
-----------------|-------------
-|[create_customer.md](./Create%20customer/create_customer.md) | API to create customer for the requesting office |
-|[create_demand.md](./Create%20and%20update%20demand/create_demand.md) | API to create demand |
-| [update_demand.md](./Create%20and%20update%20demand/update_demand.md) | APIs to update an existing demand |
-| [invoice_action.md](./Invoice%20Action/invoice_action.md) | APIs to add invoice |
-| [errors.md](./Error%20listings%20and%20Handling/errors.md) | Error Listings |
+
 ----
 
 

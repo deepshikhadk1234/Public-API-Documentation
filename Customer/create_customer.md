@@ -19,7 +19,7 @@ To create a customer/client for an existing office the following fields informat
 ### Header
 
 **Method : PUT**
-```json
+```
 curl --location --request PUT 'baseURL' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: {{token}} \
