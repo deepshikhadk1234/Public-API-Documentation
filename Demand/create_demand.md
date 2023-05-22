@@ -20,11 +20,7 @@ To create a demand for an existing office the following fields information are i
 
 **Method : PUT**
 
-<<<<<<< HEAD:Demand/create_demand.md
 ```
-=======
-```curl
->>>>>>> 8874b771d49ca4f934cbba2541ded18ed5c5eff3:Create and update demand/create_demand.md
 curl --location --request PUT 'baseURL' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: {{token}} \
