@@ -40,7 +40,7 @@ curl --location --request PUT 'baseURL' \
   ```
 | Key | Value | Data Type | Description |
 | ----------- | ----------- | ------------| ----------- |
-| `Authorization` | Basic {{token}} | String | Token generated from login |
+| `Authorization` | Bearer {{token}} | String | Token generated from login |
 |`Content-Type `| Application/json | String | application/json |
 
 ----
